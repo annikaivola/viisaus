@@ -18,19 +18,19 @@ export function getMessages(callback) {
   });
 }
 
-export function getMessagesWithEmoijtag(emoijtag ,callback) {
-  let emoijonary =  [
-    { emoij: "🦄", name: "unicorn" },
-    { emoij: "🤣", name: "rofl" },
-    { emoij: "🍻", name: "beer" },
-    { emoij: "😎", name: "cool" },
-    { emoij: "💩", name: "poop" },
-    { emoij: "🤯", name: "mindblown" },
-    { emoij: "🙌", name: "praise" },
-    { emoij: "😍", name: "hearteyes" },
+export function getMessagesWithEmoijtag(emojitag ,callback) {
+  let emojionary =  [
+    { emoji: "🦄", name: "unicorn" },
+    { emoji: "🤣", name: "rofl" },
+    { emoji: "🍻", name: "beer" },
+    { emoji: "😎", name: "cool" },
+    { emoji: "💩", name: "poop" },
+    { emoji: "🤯", name: "mindblown" },
+    { emoji: "🙌", name: "praise" },
+    { emoji: "😍", name: "hearteyes" },
   ]
 
-  let obj = emoijonary.find(o => o.emoij === emoijtag)
+  let obj = emojionary.find(o => o.emoji === emojitag)
   fetch( "api/posts/" + obj.name)
   .then(function (response) {
     if (!response.ok) {
