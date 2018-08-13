@@ -42,7 +42,6 @@ class Message extends Component {
   }
   sendMessage = (e) => {
     e.preventDefault();
-        console.log("Im here")
     this.addMessage(this.state); //tässä on iso onglema
     this.setState({ Message: '' });
 
